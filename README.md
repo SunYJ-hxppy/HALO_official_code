@@ -136,7 +136,7 @@ Run `python inference_ourmethod_final.py --help` for the full list.
 
 ## 🎬 Results
 
-Example produced by the quick-start command above — reference motion (a BMX rider) transferred to the prompt *"Leopard running up a snowy hill in a forest"*:
+HALO transfers the **turning motion** of a drifting car onto a completely different subject while following the target prompt — here, an airplane executing the same trajectory:
 
 <table>
   <tr>
@@ -144,15 +144,12 @@ Example produced by the quick-start command above — reference motion (a BMX ri
     <td align="center"><b>HALO (Ours)</b></td>
   </tr>
   <tr>
-    <td><img src="assets/sample_outputs/bmx-trees.gif" width="100%"></td>
-    <td><img src="assets/sample_outputs/results.gif" width="100%"></td>
+    <td><img src="assets/sample_outputs/drift-turn.gif" width="100%"></td>
+    <td><img src="assets/sample_outputs/ours_driftturn.gif" width="100%"></td>
   </tr>
 </table>
 
-Additional samples using **embedding injection** (`--inject_embeds`) are provided in
-[`assets/sample_outputs/`](assets/sample_outputs) (`results_embed.gif`, `results_inject_embeds.gif`).
-
-> 🎞️ Reference clips (`bmx-trees`, `camel`, `lucia`, `rallye`) are available under [`assets/`](assets) to reproduce these results.
+> 🎞️ Reference clips (`bmx-trees`, `camel`, `lucia`, `rallye`) are available under [`assets/`](assets) to reproduce more results.
 
 ---
 
