@@ -1,4 +1,4 @@
-# 🌀 HALO: Controlling Motion Transfer in Diffusion Transformers via Attention Heads
+# 🎥 ECCV 2026 - Controlling Motion Transfer in Diffusion Transformers via Attention Heads
 
 <p align="center">
   <a href="https://sunyj-hxppy.github.io/halo"><img src="https://img.shields.io/badge/Project-Page-brightgreen" alt="Project Page"></a>
@@ -104,8 +104,8 @@ which runs:
 
 ```bash
 python inference_ourmethod_final.py \
-    --video_path ./assets/bmx-trees.mp4 \
-    --prompt "Leopard running up a snowy hill in a forest" \
+    --video_path ./assets/drift-turn.mp4 \
+    --prompt "A jet plane racing through the sky, with smoke trailing behind it." \
     --video_length 24 \
     --output_path tmp_result \
     --config_path ./configs/guidance_config_inject12.yaml
