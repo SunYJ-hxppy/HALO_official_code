@@ -9,6 +9,13 @@
   <img src="https://img.shields.io/badge/training--free-✔-success" alt="Training-free">
 </p>
 
+<p align="center">
+  <img src="assets/fig1_final.png" width="100%" alt="HALO teaser">
+</p>
+<p align="center">
+  <em>HALO identifies motion- and structure-specialized attention heads within video DiTs, generating videos that follow the target prompt while remaining motion- and structure-aligned with the reference — achieving accurate motion transfer.</em>
+</p>
+
 Official implementation of **"Controlling Motion Transfer in Diffusion Transformers via Attention Heads" (HALO)**.
 
 > Sunyoung Jung¹\*, Jiwoo Park¹²\*, Yoonseok Choi¹, Kyobin Choo¹, Ming-Hsuan Yang³, Seong Jae Hwang¹†
@@ -42,6 +49,9 @@ This head-level control yields motion transfer that is both **motion-faithful** 
 ├── inference_ourmethod_final.py     # 🚀 Main entry point (motion transfer inference)
 ├── final.sh                         # 📜 Example run script
 ├── environment.yml                  # 🐍 Conda environment (name: halo)
+├── assets/                          # 🎬 Reference clips + teaser & sample outputs
+│   ├── bmx-trees.mp4 · camel.mp4 · lucia.mp4 · rallye.mp4
+│   └── sample_outputs/                 # Example result GIFs
 ├── configs/
 │   └── guidance_config_inject12.yaml   # ⚙️ Guidance / injection hyperparameters
 ├── guidance_utils/
@@ -121,6 +131,28 @@ python inference_ourmethod_final.py \
 | `--negative_prompt` | *(see code)* | Negative prompt for generation. |
 
 Run `python inference_ourmethod_final.py --help` for the full list.
+
+---
+
+## 🎬 Results
+
+Example produced by the quick-start command above — reference motion (a BMX rider) transferred to the prompt *"Leopard running up a snowy hill in a forest"*:
+
+<table>
+  <tr>
+    <td align="center"><b>Reference</b></td>
+    <td align="center"><b>HALO (Ours)</b></td>
+  </tr>
+  <tr>
+    <td><img src="assets/sample_outputs/bmx-trees.gif" width="100%"></td>
+    <td><img src="assets/sample_outputs/results.gif" width="100%"></td>
+  </tr>
+</table>
+
+Additional samples using **embedding injection** (`--inject_embeds`) are provided in
+[`assets/sample_outputs/`](assets/sample_outputs) (`results_embed.gif`, `results_inject_embeds.gif`).
+
+> 🎞️ Reference clips (`bmx-trees`, `camel`, `lucia`, `rallye`) are available under [`assets/`](assets) to reproduce these results.
 
 ---
 
