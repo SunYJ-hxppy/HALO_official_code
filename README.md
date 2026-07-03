@@ -179,7 +179,7 @@ num_inference_steps: 50
 guidance_scale: 7
 height: 480
 width: 720
-prop_motion: 0.04               # % of channels used for MOFT
+prop_motion: 0.04               
 argmax_motion_flow: True        # Argmax over reference motion flow
 ```
 
@@ -194,18 +194,9 @@ If you find this work useful, please consider citing:
   title   = {Controlling Motion Transfer in Diffusion Transformers via Attention Heads},
   author  = {Jung, Sunyoung and Park, Jiwoo and Choi, Yoonseok and Choo, Kyobin
              and Yang, Ming-Hsuan and Hwang, Seong Jae},
-  year    = {2025}
+  year    = {202ECCV}
 }
 ```
 
-> ℹ️ Please update the BibTeX (venue / year / arXiv id) once the paper is officially published.
-
 ---
 
-## 🙏 Acknowledgements
-
-HALO builds upon [CogVideoX](https://github.com/THUDM/CogVideo) and 🤗 [diffusers](https://github.com/huggingface/diffusers), and uses [DIFT](https://github.com/Tsingularity/dift) semantic features from Stable Diffusion. We thank the authors of these projects.
-
-## 📜 License
-
-This code is released for **academic research purposes only**.
