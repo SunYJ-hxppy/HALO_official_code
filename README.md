@@ -153,18 +153,6 @@ HALO transfers the **turning motion** of a drifting car onto a completely differ
 
 ---
 
-## 🧠 Paper ↔ Code Reference
-
-| Paper concept | Where it lives |
-| --- | --- |
-| Motion-specific heads → **displacement maps** | `guidance_utils/motion_flow_utils_final.py` (`compute_motion_flow_withdift_re`, `compute_motion_flow_with_bonus`) |
-| **Semantic correspondence** (diffusion features) | `dift_models/` (`SDFeaturizer`) + `extract_dift_and_cal_sim` in `inference_ourmethod_final.py` |
-| Structure-specialized heads → **entropy-based selection** | `guidance_utils/utils.py` (`mask_head_byentropy`) |
-| **Selective structural feature injection** | `guidance_utils/custom_modules_inject_final.py` (`InjectionProcessor`, `ModuleWithGuidance`) |
-| Head-aware controlled DiT | `guidance_utils/custom_transformer_inject.py` (`ControlledTransformer`) |
-
----
-
 ## ⚙️ Configuration
 
 Key fields in `configs/guidance_config_inject12.yaml`:
